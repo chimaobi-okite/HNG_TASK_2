@@ -6,7 +6,6 @@ Version: 0.1.0
 * swagger -[https://hng-task-2-i3l2.onrender.com/docs](https://hng-task-2-i3l2.onrender.com/docs)
 * redoc - [https://hng-task-2-i3l2.onrender.com/redoc](https://hng-task-2-i3l2.onrender.com/redoc)
 
-
 ## Endpoints
 
 ### `/api`
@@ -14,51 +13,10 @@ Version: 0.1.0
 #### POST: Create Person
 
 - **Summary:** Create Person
-
-- **Parameters:**
-  - Name (query, optional, type: string)
-
 - **Request Body:** JSON
   - Name (required)
-
 - **Responses:**
   - 201: Successful Response
-  - 422: Validation Error
-
-#### GET: Get Person
-
-- **Summary:** Get Person
-
-- **Parameters:**
-  - Name (query, required, type: string)
-
-- **Responses:**
-  - 200: Successful Response
-  - 422: Validation Error
-
-#### PUT: Update Person
-
-- **Summary:** Update Person
-
-- **Parameters:**
-  - Name (query, required, type: string)
-
-- **Request Body:** JSON
-  - Name (required)
-
-- **Responses:**
-  - 201: Successful Response
-  - 422: Validation Error
-
-#### DELETE: Delete Person
-
-- **Summary:** Delete Person
-
-- **Parameters:**
-  - Name (query, required, type: string)
-
-- **Responses:**
-  - 204: Successful Response
   - 422: Validation Error
 
 ### `/api/{user_id}`
@@ -66,10 +24,8 @@ Version: 0.1.0
 #### GET: Get Person
 
 - **Summary:** Get Person
-
 - **Parameters:**
   - user_id (path, required, type: integer)
-
 - **Responses:**
   - 200: Successful Response
   - 422: Validation Error
@@ -77,13 +33,10 @@ Version: 0.1.0
 #### PUT: Update Person
 
 - **Summary:** Update Person
-
 - **Parameters:**
   - user_id (path, required, type: integer)
-
 - **Request Body:** JSON
   - Name (required)
-
 - **Responses:**
   - 201: Successful Response
   - 422: Validation Error
@@ -91,10 +44,8 @@ Version: 0.1.0
 #### DELETE: Delete Person
 
 - **Summary:** Delete Person
-
 - **Parameters:**
   - user_id (path, required, type: integer)
-
 - **Responses:**
   - 204: Successful Response
   - 422: Validation Error
@@ -123,3 +74,4 @@ Version: 0.1.0
   - loc (array)
   - msg (string, required)
   - type (string, required)
+
