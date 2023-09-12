@@ -1,6 +1,11 @@
-# FastAPI Documentation
+# CRUD HNG API Documentation
 
 Version: 0.1.0
+
+## Detailed Documentation
+* swagger -[https://hng-task-2-i3l2.onrender.com/docs](https://hng-task-2-i3l2.onrender.com/docs)
+* redoc - [https://hng-task-2-i3l2.onrender.com/redoc](https://hng-task-2-i3l2.onrender.com/redoc)
+
 
 ## Endpoints
 
