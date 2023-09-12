@@ -1,132 +1,120 @@
-# FastAPI
-## Version: 0.1.0
+# FastAPI Documentation
 
-### /api
+Version: 0.1.0
 
-#### POST
-##### Summary:
+## Endpoints
 
-Create Person
+### `/api`
 
-##### Parameters
+#### POST: Create Person
 
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| name | query |  | No | string |
+- **Summary:** Create Person
 
-##### Responses
+- **Parameters:**
+  - Name (query, optional, type: string)
 
-| Code | Description |
-| ---- | ----------- |
-| 201 | Successful Response |
-| 422 | Validation Error |
+- **Request Body:** JSON
+  - Name (required)
 
-#### GET
-##### Summary:
+- **Responses:**
+  - 201: Successful Response
+  - 422: Validation Error
 
-Get Person
+#### GET: Get Person
 
-##### Parameters
+- **Summary:** Get Person
 
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| name | query |  | Yes | string |
+- **Parameters:**
+  - Name (query, required, type: string)
 
-##### Responses
+- **Responses:**
+  - 200: Successful Response
+  - 422: Validation Error
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Successful Response |
-| 422 | Validation Error |
+#### PUT: Update Person
 
-#### PUT
-##### Summary:
+- **Summary:** Update Person
 
-Update Person
+- **Parameters:**
+  - Name (query, required, type: string)
 
-##### Parameters
+- **Request Body:** JSON
+  - Name (required)
 
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| name | query |  | Yes | string |
+- **Responses:**
+  - 201: Successful Response
+  - 422: Validation Error
 
-##### Responses
+#### DELETE: Delete Person
 
-| Code | Description |
-| ---- | ----------- |
-| 201 | Successful Response |
-| 422 | Validation Error |
+- **Summary:** Delete Person
 
-#### DELETE
-##### Summary:
+- **Parameters:**
+  - Name (query, required, type: string)
 
-Delete Person
+- **Responses:**
+  - 204: Successful Response
+  - 422: Validation Error
 
-##### Parameters
+### `/api/{user_id}`
 
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| name | query |  | Yes | string |
+#### GET: Get Person
 
-##### Responses
+- **Summary:** Get Person
 
-| Code | Description |
-| ---- | ----------- |
-| 204 | Successful Response |
-| 422 | Validation Error |
+- **Parameters:**
+  - user_id (path, required, type: integer)
 
-### /api/{user_id}
+- **Responses:**
+  - 200: Successful Response
+  - 422: Validation Error
 
-#### GET
-##### Summary:
+#### PUT: Update Person
 
-Get Person
+- **Summary:** Update Person
 
-##### Parameters
+- **Parameters:**
+  - user_id (path, required, type: integer)
 
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| user_id | path |  | Yes | integer |
+- **Request Body:** JSON
+  - Name (required)
 
-##### Responses
+- **Responses:**
+  - 201: Successful Response
+  - 422: Validation Error
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Successful Response |
-| 422 | Validation Error |
+#### DELETE: Delete Person
 
-#### PUT
-##### Summary:
+- **Summary:** Delete Person
 
-Update Person
+- **Parameters:**
+  - user_id (path, required, type: integer)
 
-##### Parameters
+- **Responses:**
+  - 204: Successful Response
+  - 422: Validation Error
 
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| user_id | path |  | Yes | integer |
+## Schemas
 
-##### Responses
+### HTTPValidationError
 
-| Code | Description |
-| ---- | ----------- |
-| 201 | Successful Response |
-| 422 | Validation Error |
+- **Properties:**
+  - detail (array)
 
-#### DELETE
-##### Summary:
+### Person
 
-Delete Person
+- **Properties:**
+  - name (string, required)
 
-##### Parameters
+### PersonOut
 
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| user_id | path |  | Yes | integer |
+- **Properties:**
+  - name (string, required)
+  - user_id (integer, required)
 
-##### Responses
+### ValidationError
 
-| Code | Description |
-| ---- | ----------- |
-| 204 | Successful Response |
-| 422 | Validation Error |
+- **Properties:**
+  - loc (array)
+  - msg (string, required)
+  - type (string, required)
