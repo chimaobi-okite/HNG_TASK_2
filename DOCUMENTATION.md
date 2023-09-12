@@ -18,6 +18,9 @@ Version: 0.1.0
 - **Responses:**
   - 201: Successful Response
   - 422: Validation Error
+- **Request Samples:**
+  - 201: Successful Response
+  - 422: Validation Error
 
 ### `/api/{user_id}`
 
